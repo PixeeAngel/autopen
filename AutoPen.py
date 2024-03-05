@@ -1405,7 +1405,7 @@ class SeeAllPage(Screen):
 	def install_all(widget):
 		for i in all_tools:
 			#just for this tool, need to change the name to be consistent with the backend. In the list it is can-utils-j1939 because it is used for the search functionality
-			if i is 'can-utils-j1939':
+			if i == 'can-utils-j1939':
 				i = 'j1939'
 
 			rc_i = install.install(i)
