@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import print_function # Only Python 2.x
 from Tkinter import *
 import time;
 import subprocess
