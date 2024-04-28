@@ -21,13 +21,7 @@ import random
 
 # Textbox values to be currently diplayed by ARB ID managemant
 boxcounter = 0
-global stats
 stats = {}
-
-# Selected CANinterface to connect to
-global CANinterface 
-global interface_stored
-global stop
 interface_stored = 0
 CANinterface = ""
 stop = False
