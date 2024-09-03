@@ -61,7 +61,7 @@ else:
 			subprocess.run(['sudo', 'dpkg-reconfigure', 'dash'])
 			print ('VIRTUALENV SUCCESSFUL: Successfully setup kivy isolated environment')
 			print ('Entering the virtualenv environment...')
-			enter_rc = subprocess.run(['source ./kivyinstall/bin/activate'],shell=True).returncode
+			enter_rc = subprocess.run(['source ./kivyinstall/bin/activate'],shell=False).returncode
 			if enter_rc != 0:
 				print ('VIRTUALENV FAILED: Failed to enter the kivy python environment set-up')
 				print ('WITH ERROR CODE:', enter_rc)
