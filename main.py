@@ -7,6 +7,8 @@ import subprocess
 import matplotlib
 import threading
 import ttk
+import secrets
+
 matplotlib.use('TkAgg')
 from numpy import arange, sin, pi
 import matplotlib.pyplot as plt
@@ -17,7 +19,6 @@ import os
 import signal
 import MySQLdb
 import string
-import random
 
 # Textbox values to be currently diplayed by ARB ID managemant
 boxcounter = 0
@@ -1418,7 +1419,7 @@ class Application(Frame):
 		thread.start() 
 
 	def ARB_generator(self, size, chars="ABCDEF12345678"):
-		return (''.join(random.choice(chars) for _ in range(size)))
+		return (''.join(secrets.choice(chars) for _ in range(size)))
 
 	def remove_gridobject(root, row, column):
 		# remove from screen:
