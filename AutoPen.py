@@ -764,9 +764,9 @@ Builder.load_string("""
 installed_tools = []
 
 try:
-	already_installed = open('installed.txt', 'r')
-	for i in already_installed.readlines():
-		installed_tools.append(i.strip('\n'))
+	with open('installed.txt', 'r') as already_installed:
+		for i in already_installed.readlines():
+			installed_tools.append(i.strip('\n'))
 except FileNotFoundError:
 	
 	pass

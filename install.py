@@ -77,9 +77,9 @@ def install(toolname):
 		return tools.installed_tools(pack_man, 'tshark')
 
 def test(name):
-	it = open('installed.txt', 'a')
-	it.write(name)
-	it.write('\n')
+	with open('installed.txt', 'a') as it:
+		it.write(name)
+		it.write('\n')
 	return 0
 
 
