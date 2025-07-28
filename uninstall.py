@@ -105,14 +105,13 @@ def uninstall(toolname):
 		pass
 
 	if rm_rc == 0:
-		#remove the tool from the text file
-		f = open("installed.txt","r+")
-		d = f.readlines()
-		f.seek(0)
-		for i in d:
-			if i != toolname:
-				f.write(i)
-		f.truncate()
+		with open("installed.txt","r+") as f:
+			d = f.readlines()
+			f.seek(0)
+			for i in d:
+				if i != toolname:
+					f.write(i)
+			f.truncate()
 
 		print ('UNINSTALL SUCCESSFUL: Successfully uninstalled', toolname)
 
